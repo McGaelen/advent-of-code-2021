@@ -53,10 +53,10 @@ int read_file_split(char* filename, char* delimiter, char*** outBuffer)
   }
 
   // Split up string by delimiter into individual char*'s --------------
-  *outBuffer = malloc(sizeof(char *) * numLines);
+  *outBuffer = malloc(sizeof(char*) * numLines);
 
   *outBuffer[0] = strtok(buffer, delimiter); 
-  for (int i = 1; i < (numLines); i++) {
+  for (int i = 1; i < numLines; i++) {
     (*outBuffer)[i] = strtok(NULL, delimiter); 
   }
 
